@@ -1,0 +1,141 @@
+<div class="location">
+        <h2>Pune's Location</h2>
+        <h4>Geographical Position:</h4>
+        <ul>
+            <li>Pune is situated in the western part of India, specifically in the state of Maharashtra.</li>
+            <li>It lies in the Deccan Plateau region, which is a large plateau that covers much of central and southern
+                India.</li>
+            <li>Pune is positioned towards the eastern edge of the plateau.</li>
+        </ul>
+        <h4>Relative Location:</h4>
+        <ul>
+            <li>Pune is located approximately 118 kilometers (73 miles) southeast of Mumbai, the capital city of
+                Maharashtra.</li>
+            <li>Mumbai serves as a major economic and cultural center, and its proximity to Pune has significant
+                implications for transportation, commerce, and connectivity.</li>
+        </ul>
+        <h4>Surrounding Regions:</h4>
+        <ul>
+            <li>Pune is surrounded by various geographical features and regions.</li>
+            <li>To the west, the Sahyadri mountain range, also known as the Western Ghats, forms a natural barrier.</li>
+            <li> These mountains are known for their biodiversity and serve as a source of rivers and waterfalls.</li>
+            <li> To the east of Pune, the Deccan Plateau extends across much of the Indian subcontinent, characterized
+                by its flat and rocky terrain.</li>
+        </ul>
+        <h4>River Confluence:</h4>
+        <ul>
+            <li>Pune is located at the confluence of the Mula and Mutha rivers, which merge to form the Mula-Mutha
+                River.</li>
+            <li>These rivers play a crucial role in the city's water supply, irrigation, and transportation.</li>
+            <li> The Mula-Mutha River eventually joins the Bhima River, a major tributary of the Krishna River.</li>
+        </ul>
+        <h4>Latitude and Longitude:</h4>
+        <ul>
+            <li>The precise geographic coordinates of Pune are approximately 18.5204° N latitude and 73.8567° E
+                longitude.</li>
+            <li>These coordinates mark Pune's position on the Earth's surface relative to the equator (latitude) and the
+                Prime Meridian (longitude).</li>
+        </ul>
+        <h4>Altitude:</h4>
+        <ul>
+            <li>Pune sits at an elevation of approximately 560 meters (1,840 feet) above sea level.</li>
+            <li>While not particularly high compared to mountainous regions, Pune's altitude contributes to its
+                relatively temperate climate and distinguishes it from coastal areas.</li>
+        </ul>
+        <h4>Climate Zone:</h4>
+        <ul>
+            <li>Pune falls within the tropical zone and experiences a tropical wet and dry climate, classified as Aw
+                according to the Köppen climate classification system.</li>
+            <li>This climate is characterized by distinct wet and dry
+                seasons, with hot summers, rainy monsoons, and mild winters.</li>
+        </ul>
+    </div>
+
+
+    .box1 {
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        background-color: rgb(255, 217, 151);
+        font-weight: bold;
+        margin-right: 20px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        flex: 2;
+    }
+
+    .box1:hover {
+        background-color: rgb(245, 208, 98);
+    }
+
+    .box2 {
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        background-color: rgb(242, 246, 175);
+        font-weight: bold;
+        margin-right: 20px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        flex: 3;
+    }
+
+    .box2:hover {
+        background-color: rgb(225, 245, 98);
+    }
+
+    .box3 {
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        background-color: rgb(159, 249, 210);
+        font-weight: bold;
+        margin-right: 20px;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        flex: 4;
+    }
+
+    .box3:hover {
+        background-color: rgb(98, 245, 218);
+    }
+
+    .box4 {
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        background-color: rgb(159, 244, 249);
+        font-weight: bold;
+        flex: 5;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        margin-top: 20px;
+        
+    }
+
+    .box4:hover {
+        background-color: rgb(98, 225, 245);
+    }
+
+    .box5 {
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 15px;
+        width: 300px;
+        background-color: rgb(159, 244, 249);
+        font-weight: bold;
+        flex: 6;
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        margin-top: 20px;
+        
+    }
+
+.box5:hover{
+        background-color: rgb(98, 225, 245);
+
+}
