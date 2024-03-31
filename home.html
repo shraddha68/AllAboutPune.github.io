@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> All About Pune </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Protest+Riot&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="geography.html">PuneScape</a></li>
+                <li><a href="history.html">Pune Saga</a></li>
+                <li><a href="gallery.html">Sight Symphony</a></li>
+            </ul>
+        </div>
+        <div class="welcome">
+            Here every street and every corner has its own story to tell. We invite you on this beautiful virtual
+            journey of our Pune and lets take you on this vibrant and beautiful exploration of this majestic city!
+        </div>
+    </div>
+    <div class="marquee">
+        <p>Y'all are welcomed to the virtual "Darshan" of Pune!</p>
+    </div>
+    <div class="bodyline">
+        <p> Explore Pune and its majestic beauty with us!</p>
+        <div class="cuisine">
+            <img src="R (3).jpg">
+            <div class="cuisinetext"><a href="cuisine.html">Cuisine</a></div>
+        </div>
+        <div class="historicalplaces">
+            <img src="historicalplaces.webp">
+            <div class="historicalplacestext"><a href="historicalplaces.html">Historical Places</a></div>
+        </div>
+        <div class="temples">
+            <img src="ganpati-images-hd-wallpapers.jpeg">
+            <div class="templestext"><a href="temples.html">Temples</a></div>
+        </div>
+        <div class="recreationalplaces">
+            <img src="recreationalplaces.jpg">
+            <div class="recreationalplacestext"><a href="recreationalplaces.html">Recreational Places</a></div>
+        </div>
+        <div class="accomodation">
+            <img src="accomodation.jpg">
+            <div class="accomodationtext"><a href="accomodation.html">Accomodation</a></div>
+        </div>
+
+        <div class="distance">
+            <p><img src="car.png"> Find the distance of Pune from your city in Maharashtra! <img src="car.png"></p>
+            <form>
+                <label for="city">Enter city name:</label>
+                <input type="text" id="city" name="city">
+                <button type="button" id="calculateBtn" onclick="calculateDistance()">Calculate Distance</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </div>
+
+<div class="container">
+    <h2>Feel free to drop down your feedback here. Thank you!</h2>
+    <div class="feedback">
+            <form id="feedbackForm" action="connect.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="fullname" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+    
+                <button type="submit">Submit Feedback</button>
+            </form>
+    </div>
+</div>
+    
+</body>
+
+<script>
+    function calculateDistance() {
+        var city = document.getElementById("city").value.toLowerCase(); 
+        var distance;
+        var distances = {
+           "mumbai": 155,
+            "nagpur": 691,
+            "nashik": 216,
+            "pimprichinchwad": 16.4,
+            "pimpri-chinchwad": 16.4,
+            "pimpri chinchwad": 16.4,
+            "thane": 150,
+            "kalyandombivali": 147,
+            "kalyan-dombivali": 147,
+            "kalyan dombivali": 147,
+            "vasaivirar": 178,
+            "vasai-virar": 178,
+            "vasai virar": 178,
+            "chhatrapati sambhaji nagar": 235,
+            "chhatrapatisambhajinagar": 235,
+            "chhatrapati-sambhaji-nagar": 235,
+            "navi mumbai": 128,
+            "navi-mumbai": 128,
+            "navimumbai": 128,
+            "solapur": 235,
+            "mira bhayandar": 173,
+            "mira-bhayandar": 173,
+            "mirabhayandar": 173,
+            "bhiwandi nizampur": 152,
+            "bhiwandi-nizampur": 152,
+            "bhiwandinizampur": 152,
+            "amravati": 551,
+            "nanded-waghala": 448,
+            "nandedwaghala": 448,
+            "nanded waghala": 448,
+            "kolhapur": 233,
+            "ulhasnagar": 147,
+            "sangli miraj kupwad": 235,
+            "sanglimirajkupwad": 235,
+            "sangli-miraj-kupwad": 235,
+            "malegaon": 299,
+            "jalgaon": 390,
+            "akola": 484,
+            "latur": 373,
+            "dhule": 355,
+            "ahmednagar": 122,
+            "chandrapur": 750,
+            "parbhani": 380,
+            "ichalkaranji": 237,
+            "jalna": 385,
+            "ambarnath": 147,
+            "panvel": 121,
+            "bhusawal": 395,
+            "badlapur": 132,
+            "beed": 249,
+            "gondia": 848,
+            "satara": 109,
+            "barshi": 224,
+            "yavatmal": 580,
+            "achalpur": 592,
+            "osmanabad": 263,
+            "nandurbar": 447,
+            "wardha": 620,
+            "udgir": 437,
+            "hinganghat": 660
+        };
+
+        if (city in distances) {
+            distance = distances[city];
+            document.getElementById("result").innerHTML = "The distance between Pune and " + city.charAt(0).toUpperCase() + city.slice(1) + " is " + distance + " kilometers."; 
+        } else {
+            document.getElementById("result").innerHTML = "Distance for this city is not available.";
+        } 
+    };
+</script>
+
+<style>
+    .container {
+       background-image: url("350850-website-background-1920x1234-for-android-50.jpg");
+       border-radius: 10px;
+       padding-bottom: 10px;
+    }
+    .feedback {
+        width: 100%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    h2 {
+        font-size: 35px;
+        text-shadow: 3px 3px 3px black;
+        font-family: 'Architects Daughter', cursive;
+        color: rgb(240, 243, 146);
+        text-align: center;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .feedback label {
+        display: block;
+        font-size: 20px;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    .feedback input[type="text"],
+input[type="email"],
+textarea {
+    width:1000px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 15px;
+}
+
+.feedback button {
+    background-color: #a2dade;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    color: black;
+    font-family: 'Architects Daughter', cursive;
+    display: block;
+    margin-left: 40%;
+}
+
+    .header {
+        background-image: url(Purple\ Watercolor\ Business\ Card.png);
+        background-size: cover;
+        font-family: 'Architects Daughter', cursive;
+        padding-bottom: 10px;
+        border-radius: 10px;
+        height: 800px;
+    }
+
+    .header .welcome {
+        color: white;
+        font-size: 35px;
+        text-shadow: 2px 2px 2px brown;
+        font-weight: bold;
+        margin-top: 500px;
+    }
+
+    .marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: burlywood;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.marquee p {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    font-size: 20px;
+    padding-left: 20%;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+    li {
+        display: inline;
+        top: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    ul {
+        list-style-type: none;
+        font-size: 20px;
+        padding-top: 5px;
+        width: 100%;
+        top: 0;
+        margin-bottom: 50px;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: white;
+        top: 0;
+    }
+
+    ul li a:hover {
+        color: rgb(6, 71, 111);
+    }
+
+    li a:hover {
+        text-shadow: rgb(0, 0, 0) 2px 2px;
+    }
+
+    .welcome {
+        font-size: 30px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    img {
+        width: 100%;
+    }
+
+    .bodyline {
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .bodyline p {
+        color: black;
+        text-align: center;
+        font-size: 40px;
+        margin: 5px;
+        font-weight: 500;
+        font-family: "Protest Riot", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+        text-shadow: 2px 2px rgb(167, 239, 183);
+    }
+
+    .bodyline a {
+        text-decoration: none;
+        color: black;
+        text-shadow: 2px 2px rgb(223, 236, 151);
+    }
+
+
+    .cuisinetext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        font-family: 'Alex Brush', cursive;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.727);
+    }
+
+    .cuisine {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+
+    }
+
+    .cuisine img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    .cuisine img:hover {
+        transform: scale(1.2, 1.2);
+    }
+
+    .historicalplacestext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        font-family: 'Alex Brush', cursive;
+        font-weight: bold;
+        text-shadow: 2px 2px rgb(223, 236, 151);
+        color: rgba(0, 0, 0, 0.727);
+    }
+
+    .historicalplaces {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+
+    }
+
+    .historicalplaces img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    .historicalplaces img:hover {
+        transform: scale(1.2, 1.2);
+    }
+
+    .templestext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        font-family: 'Alex Brush', cursive;
+        font-weight: bold;
+        text-shadow: 2px 2px rgb(223, 236, 151);
+        color: rgba(0, 0, 0, 0.727);
+    }
+
+    .temples {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+
+    }
+
+    .temples img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    .temples img:hover {
+        transform: scale(1.2, 1.2);
+    }
+
+    .recreationalplacestext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        font-family: 'Alex Brush', cursive;
+        font-weight: bold;
+        text-shadow: 2px 2px rgb(223, 236, 151);
+        color: rgba(0, 0, 0, 0.727);
+    }
+
+    .recreationalplaces {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+        padding-right: 50px;
+
+    }
+
+    .recreationalplaces img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    .recreationalplaces img:hover {
+        transform: scale(1.2, 1.2);
+    }
+
+    .accomodationtext {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 30px;
+        transform: translate(-50%, -50%);
+        font-family: 'Alex Brush', cursive;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.727);
+    }
+
+    .accomodation {
+        position: relative;
+        float: left;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+
+    .accomodation img {
+        width: 300px;
+        height: 250px;
+        opacity: 0.7;
+        border-radius: 20px;
+    }
+
+    .accomodation img:hover {
+        transform: scale(1.2, 1.2);
+    }
+
+    .distance {
+        margin-top: 270px;
+    }
+
+    .bodyline .distance p {
+        color: rgb(186, 83, 4);
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Architects Daughter', cursive;
+        padding-top: 300px;
+        font-weight: bold;
+        text-shadow: 2px 2px white;
+    }
+
+    .distance label {
+        font-size: 25px;
+        text-align: center;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    .distance form {
+        text-align: center;
+    }
+
+    .distance button {
+        font-size:25px;
+        text-align: center;
+        background-color: rgb(238, 240, 145);
+        border-radius: 10px;
+        border: 2px solid white;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        font-family: 'Architects Daughter', cursive;
+        padding: 5px;
+    }
+
+    .distance button:hover {
+        background-color: rgb(218, 240, 56);
+    }
+
+    .distance input {
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+        transition: border-color 0.3s ease;
+        font-family: 'Architects Daughter', cursive;
+    }
+
+    .distance input:focus {
+        border-color: dodgerblue;
+        box-shadow: 0 0 5px rgba(0, 0, 255, 0.5);
+    }
+
+    .distance img {
+        height: 40px;
+        width: 40px;
+    }
+
+    #result {
+        font-size: 30px;
+        text-align: center;
+        font-family: 'Architects Daughter', cursive;
+        color: brown;
+        text-shadow: 2px 2px burlywood;
+    }
+
+    
+</style>
+</html>
